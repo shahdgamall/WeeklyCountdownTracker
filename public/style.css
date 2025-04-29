@@ -1,18 +1,18 @@
 @font-face {
-  font-family: "lattef";
-  src: url("./fonts/LateefFont-Regular.otf") format("opentype");
+  font-family: "dahab";
+  src: url("./fonts/DahabArabicITF-ExtraBold.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
-  font-family: "amiri";
-  src: url("/public/fonts/Amiri-Regular.ttf") format("truetype");
+  font-family: "dahab2";
+  src: url("./fonts/DahabArabicITF-Regular.otf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
 body {
-  font-family: "lattef", "Arial", sans-serif;
+  font-family: "dahab", "Arial", sans-serif;
   background-color: #0d1b2a;
   color: #fef8e0;
   display: flex;
@@ -42,6 +42,7 @@ select {
   appearance: none; /* يشيل الشكل الافتراضي */
   -webkit-appearance: none;
   -moz-appearance: none;
+  font-family: "dahab2";
 
   background-color: #1b263b; /* كحلي ناعم */
   color: #fefae0; /* لون الخط هادي */
