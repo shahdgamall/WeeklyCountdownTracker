@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weekly Countdown Tracker</title>
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="favicon/apple-touch-icon.png" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="favicon/favicon-32x32.png" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="favicon/favicon-16x16.png" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>الوقت المتبقي حتى نهاية الأسبوع</h1>
+
+      <label for="mode">اختر نوع العد التنازلي:</label>
+      <select id="mode" onchange="switchMode()">
+        <option value="1">من بداية الأسبوع إلى نهايته</option>
+        <option value="2">من الآن إلى يوم معين</option>
+      </select>
+      <br /><br />
+
+      <div id="fullWeekInputs">
+        <label for="startDay">اختر بداية الأسبوع:</label>
+        <select id="startDay">
+          <option value="6">السبت</option>
+          <option value="0">الأحد</option>
+          <option value="1">الاثنين</option>
+          <option value="2">الثلاثاء</option>
+          <option value="3">الأربعاء</option>
+          <option value="4">الخميس</option>
+          <option value="5">الجمعة</option>
+        </select>
+
+        <label for="endDay">اختر نهاية الأسبوع:</label>
+        <select id="endDay">
+          <option value="6">السبت</option>
+          <option value="0">الأحد</option>
+          <option value="1">الاثنين</option>
+          <option value="2">الثلاثاء</option>
+          <option value="3">الأربعاء</option>
+          <option value="4">الخميس</option>
+          <option value="5">الجمعة</option>
+        </select>
+      </div>
+
+      <div id="singleDayInput" style="display: none">
+        <label for="targetDay">اختر اليوم المستهدف:</label>
+        <select id="targetDay">
+          <option value="6">السبت</option>
+          <option value="0">الأحد</option>
+          <option value="1">الاثنين</option>
+          <option value="2">الثلاثاء</option>
+          <option value="3">الأربعاء</option>
+          <option value="4">الخميس</option>
+          <option value="5">الجمعة</option>
+        </select>
+      </div>
+
+      <br />
+      <div id="countdown">..</div>
+      <p id="message"></p>
+    </div>
+    <script src="../src/script.js"></script>
+  </body>
+</html>
