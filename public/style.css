@@ -77,22 +77,3 @@ option:checked {
   color: #e76f51;
   font-weight: bold;
 }
-
-/* #startDay {
-  position: relative;
-  font-family: "amiri";
-}
-
-#startDay:after {
-  position: absolute;
-  content: "";
-  top: 14px;
-  right: 10px;
-  width: 0;
-  height: 0;
-  border: 6px solid transparent;
-  border-color: #fff transparent transparent transparent;
-}
-#startDay {
-  background-color: rgb(46, 62, 79);
-} */
