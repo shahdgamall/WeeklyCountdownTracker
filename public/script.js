@@ -175,7 +175,32 @@ function switchMode() {
   }
 }
 
+function saveSettings() {
+  localStorage.setItem("mode", document.getElementById("mode").value);
+  localStorage.setItem("startDay", document.getElementById("startDay").value);
+  localStorage.setItem("endDay", document.getElementById("endDay").value);
+  localStorage.setItem("targetDay", document.getElementById("targetDay").value);
+}
+
+function loadSettings() {
+  if (localStorage.getItem("mode")) {
+    document.getElementById("mode").value = localStorage.getItem("mode");
+  }
+  if (localStorage.getItem("startDay")) {
+    document.getElementById("startDay").value =
+      localStorage.getItem("startDay");
+  }
+  if (localStorage.getItem("endDay")) {
+    document.getElementById("endDay").value = localStorage.getItem("endDay");
+  }
+  if (localStorage.getItem("targetDay")) {
+    document.getElementById("targetDay").value =
+      localStorage.getItem("targetDay");
+  }
+}
+
 window.onload = function () {
+  loadSettings();
   switchMode();
 
   document
@@ -187,4 +212,8 @@ window.onload = function () {
   document
     .getElementById("targetDay")
     .addEventListener("change", updateCountdownToDay);
+  document.getElementById("mode").addEventListener("change", saveSettings);
+  document.getElementById("startDay").addEventListener("change", saveSettings);
+  document.getElementById("endDay").addEventListener("change", saveSettings);
+  document.getElementById("targetDay").addEventListener("change", saveSettings);
 };
